@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HtmlViewer</string>
+    <string name="url">url</string>
+    <string name="go">Go</string>
 </resources>

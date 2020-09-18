@@ -11,48 +11,76 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-        >
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="50sp"-->
-        <!--            android:layout_gravity="center"-->
-        <!--            android:orientation="horizontal">-->
-
-        <!--            <EditText-->
-        <!--                android:id="@+id/txtView"-->
-        <!--                android:layout_width="70sp"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:layout_weight="9"-->
-        <!--                android:clickable="false"-->
-        <!--                android:cursorVisible="false"-->
-        <!--                android:focusable="false"-->
-        <!--                android:paddingLeft="20dp"-->
-        <!--                android:paddingRight="20dp"-->
-        <!--                android:singleLine="true"-->
-        <!--                android:text="file path"-->
-        <!--                android:textSize="15dp"-->
-        <!--                android:background="@color/colorAccent"-->
-        <!--                android:textColor="@color/colorPrimaryDark" />-->
-
-
-        <!--            <Button-->
-        <!--                android:id="@+id/filePick"-->
-        <!--                android:layout_width="30sp"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:layout_centerHorizontal="true"-->
-        <!--                android:layout_centerVertical="true"-->
-        <!--                android:layout_weight="1"-->
-        <!--                android:background="@color/colorPrimaryDark"-->
-        <!--                android:text="file"-->
-        <!--                android:textColor="@color/colorAccent" />-->
-        <!--        </LinearLayout>-->
-
-        <WebView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/webview"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtView"
+                android:layout_width="70sp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:autofillHints=""
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:cursorVisible="true"
+
+                android:focusable="true"
+                android:hint="@string/url"
+
+                android:inputType="textUri"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/filePick"
+                android:layout_width="30sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/go"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="end|bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:fabSize="mini"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+            </RelativeLayout>
+
+        </WebView>
+
 
     </LinearLayout>
 
